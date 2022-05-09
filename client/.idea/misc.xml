@@ -5,20 +5,22 @@
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/btn_first.xml" value="0.1055" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/btn_log.xml" value="0.1055" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/spinner_background.xml" value="0.1835" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/font/font.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/activity_main2.xml" value="0.175" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/bar.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/bar.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/d.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/fragment_chat.xml" value="0.175" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/fragment_home.xml" value="0.175" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/fragment_my.xml" value="0.175" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/gps.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/gps.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/loading.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/log.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/log_in.xml" value="0.2041522491349481" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/sign_up.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/sign_ups.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/spinner_layout.xml" value="0.12364130434782608" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/menu/menu_bottomnavi.xml" value="0.1" />
       </map>
     </option>

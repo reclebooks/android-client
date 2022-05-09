@@ -16,7 +16,9 @@ import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,12 +32,27 @@ public class GpsActivity extends Activity {
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
     private static final int PERMISSIONS_REQUEST_CODE = 100;
     String[] REQUIRED_PERMISSIONS  = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
-
+    Button nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gps);
+
+        Spinner yearSpinner = (Spinner)findViewById(R.id.juso);
+        ArrayAdapter yearAdapter = ArrayAdapter.createFromResource(this, R.array.juso,android.R.layout.simple_spinner_item);
+        yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        yearSpinner.setAdapter(yearAdapter);
+
+        nextButton = (Button) findViewById(R.id.nextbutton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BarActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         if (!checkLocationServicesStatus()) {
@@ -63,6 +80,7 @@ public class GpsActivity extends Activity {
 
                 String address = getCurrentAddress(latitude, longitude);
                 textview_address.setText(address);
+                yearSpinner.setVisibility(View.VISIBLE);
 
                 Toast.makeText(GpsActivity.this, "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
             }

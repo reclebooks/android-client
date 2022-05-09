@@ -18,8 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         app:menu="@menu/menu_bottomnavi"
+        android:theme="@style/MyItemFont"
         app:itemBackground="@android:color/white"
         app:itemIconTint="@color/purple_500"
-        app:itemTextColor="@color/black">
+        app:itemTextColor="@color/teal_200">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </LinearLayout>
