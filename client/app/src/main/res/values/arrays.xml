@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="juso">
+        <item>동네 선택</item>
+        <item>충청북도 청주시 서원구 개신동</item>
+        <item>충청북도 청주시 서원구 사창동</item>
+        <item>충청북도 청주시 서원구 복대2동</item>
+        <item>충청북도 청주시 서원구 봉명1동</item>
+        <item>충청북도 청주시 서원구 복대동</item>
+        <item>충청북도 청주시 서원구 성화동</item>
+        <item>충청북도 청주시 서원구 수곡2동</item>
+        <item>충청북도 청주시 서원구 가경동</item>
+        <item>충청북도 청주시 서원구 모충동</item>
+        <item>충청북도 청주시 서원구 복대1동</item>
+        <item>충청북도 청주시 서원구 죽림동</item>
+    </string-array>
+</resources>
