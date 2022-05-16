@@ -23,6 +23,7 @@
         <activity android:name=".GpsActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".BarActivity"></activity>
+        <activity android:name=".WritingActivity"></activity>
     </application>
 
 </manifest>
