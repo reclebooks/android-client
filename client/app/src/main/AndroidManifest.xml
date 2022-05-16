@@ -23,6 +23,9 @@
         <activity android:name=".GpsActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".BarActivity"></activity>
+        <activity android:name=".BuylistActivity"></activity>
+        <activity android:name=".SelllistActivity"></activity>
+        <activity android:name=".likelistActivity"></activity>
     </application>
 
 </manifest>
