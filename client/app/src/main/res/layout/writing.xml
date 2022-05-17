@@ -15,49 +15,7 @@
         tools:context=".MainActivity">
 
 
-        <TextView
-            android:id="@+id/WritePencilText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="187dp"
-            android:text="필기 (연필 / 샤프)"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UnderlinePenCheck" />
 
-        <TextView
-            android:id="@+id/WritePenText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="172dp"
-            android:text="필기 (볼펜 / 형광펜)"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WritePencilText" />
-
-        <TextView
-            android:id="@+id/BookCoverText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="260dp"
-            android:text="겉표지"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WritePenText" />
-
-        <TextView
-            android:id="@+id/BookPageText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="260dp"
-            android:text="페이지"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BookCoverText" />
 
         <EditText
             android:id="@+id/BookPriceMemo"
@@ -164,8 +122,8 @@
         <EditText
             android:id="@+id/BookAuthorMemo"
             android:layout_width="280dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="19dp"
             android:layout_marginEnd="26dp"
             android:background="@drawable/box_border"
             android:inputType="textLongMessage"
@@ -177,7 +135,7 @@
             android:id="@+id/BookPublishingDateMemo"
             android:layout_width="280dp"
             android:layout_height="20dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="26dp"
             android:background="@drawable/box_border"
             android:inputType="date"
@@ -198,7 +156,7 @@
             app:layout_constraintTop_toBottomOf="@+id/BookPriceText" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/ProfessorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -209,7 +167,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/CourseTexr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -217,10 +175,10 @@
             android:text="수업명"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/ProfessorText" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/ProfessorMemo"
             android:layout_width="280dp"
             android:layout_height="20dp"
             android:layout_marginTop="20dp"
@@ -232,123 +190,76 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <EditText
-            android:id="@+id/editTextTextLongMessage"
+            android:id="@+id/CourseMemo"
             android:layout_width="280dp"
             android:layout_height="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="26dp"
             android:background="@drawable/box_border"
             android:inputType="textLongMessage"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+            app:layout_constraintTop_toBottomOf="@+id/ProfessorMemo" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="39dp"
             android:text="필기한 흔적이 있나요?"
             android:textColor="@color/purple_500"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-        <CheckBox
-            android:id="@+id/UnderLineCheckPencil"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10">
-
-        </CheckBox>
-
-        <CheckBox
-            android:id="@+id/UnderLineCheckPen"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UnderLineCheckPencil">
-
-        </CheckBox>
-
-        <CheckBox
-            android:id="@+id/WriteCheckPencil"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UnderLineCheckPen">
-
-        </CheckBox>
-
-        <CheckBox
-            android:id="@+id/WriteCheckPen"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WriteCheckPencil">
-
-        </CheckBox>
-
-        <CheckBox
-            android:id="@+id/BookCoverCheck"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WriteCheckPen">
-
-        </CheckBox>
-
-        <CheckBox
-            android:id="@+id/BookPageCheck"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BookCoverCheck">
-
-        </CheckBox>
+            app:layout_constraintTop_toBottomOf="@+id/CourseTexr" />
 
         <TextView
-            android:id="@+id/UnderlinePencilText"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="187dp"
-            android:text="밑줄 (연필 / 샤프)"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="필기 흔적을 사진으로 남겨주세요."
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <TextView
-            android:id="@+id/UnderlinePenCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="172dp"
-            android:text="밑줄 (볼펜 / 형광펜)"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UnderlinePencilText" />
-
-        <TextView
-            android:id="@+id/BookImageText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/BookStateImage"
+            android:layout_width="113dp"
+            android:layout_height="111dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="33dp"
-            android:text="실제 사진을 찍어주세요."
-            android:textColor="@color/purple_500"
-            android:textSize="18sp"
+            android:layout_marginTop="17dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BookPageText" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+        <EditText
+            android:id="@+id/BookStateMemo"
+            android:layout_width="376dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/box_border"
+            android:hint="필기 흔적 또는 교재 정보를 상세하게 적어주세요."
+            android:inputType="textMultiLine"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookStateImage" />
+
+        <Button
+            android:id="@+id/WriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_first"
+            android:text="작성하기"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookStateMemo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
