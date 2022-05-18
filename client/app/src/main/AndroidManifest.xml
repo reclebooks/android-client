@@ -26,7 +26,7 @@
         <activity android:name=".BuylistActivity"></activity>
         <activity android:name=".SelllistActivity"></activity>
         <activity android:name=".likelistActivity"></activity>
-        <activity android:name=".WritingActivity"></activity>
+        <activity android:name=".Book.WritingActivity"></activity>
     </application>
 
 </manifest>
