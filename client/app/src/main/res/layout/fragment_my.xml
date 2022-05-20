@@ -93,34 +93,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginBottom="21dp"
             android:text="user"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/NickNameView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/UserIdText"
+            app:layout_constraintStart_toEndOf="@+id/NickNameView" />
 
         <TextView
             android:id="@+id/UserIdText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="14dp"
             android:layout_marginStart="33dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginBottom="19dp"
             android:text="aaaaa1234"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/IdView"
-            app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
+            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
+            app:layout_constraintStart_toEndOf="@+id/IdView" />
 
         <TextView
             android:id="@+id/UserDealScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginBottom="28dp"
             android:text="89"
-            android:textColor="@color/purple_500"
+            android:textColor="#172323"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/DealScoreView"
-            app:layout_constraintTop_toBottomOf="@+id/UserIdText" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
