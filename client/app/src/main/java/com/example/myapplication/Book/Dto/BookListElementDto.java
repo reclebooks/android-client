@@ -5,8 +5,7 @@ public class BookListElementDto {
     private String book_made;
     private String money;
     private String day;
-    private String thumb_url;
-
+    // 이미지는 어떻게 받아오나요?
     public BookListElementDto(String name, String book_made, String money, String day) {
         this.name = name;
         this.book_made = book_made;
@@ -30,7 +29,4 @@ public class BookListElementDto {
         return day;
     }
 
-    public String getThumb_url() {
-        return thumb_url;
-    }
 }

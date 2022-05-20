@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.Book.Dto.BookListElementDto;
 import com.example.myapplication.R;
 
-
 public class FragmentHome extends Fragment
 {
     ImageButton writingButton;
@@ -39,7 +38,7 @@ public class FragmentHome extends Fragment
         recyclerView.setLayoutManager(layoutManager);
         bookAdapter = new BookAdapter();
 
-        bookAdapter.addItem(new BookListElementDto("역사와비판적사고", "한빛아카데미","30,000원","2020.03.10"));
+        bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         recyclerView.setAdapter(bookAdapter);
 
         this.writingButton.setOnClickListener(v ->

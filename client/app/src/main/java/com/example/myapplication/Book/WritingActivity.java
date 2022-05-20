@@ -33,6 +33,7 @@ public class WritingActivity extends AppCompatActivity
         CourseMemo=(EditText) findViewById(R.id.CourseMemo); // 수업명
         BookStateMemo=(EditText) findViewById(R.id.BookStateMemo); // 책 상태
 
+        // 작성하기 버튼 누르면
         WriteButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -44,6 +45,7 @@ public class WritingActivity extends AppCompatActivity
                 bookCreateDto.setProfessor(String.valueOf(ProfessorMemo.getText()));
                 bookCreateDto.setCourse(String.valueOf(CourseMemo.getText()));
                 bookCreateDto.setBookstate(String.valueOf(BookStateMemo.getText()));
+                // 작성하기 버튼 누르면, 정보가 DB로 넘어가면서 메인화면으로 연결
                 Intent intent = new Intent(getApplicationContext(), BarActivity.class);
                 startActivity(intent);
             }

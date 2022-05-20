@@ -19,9 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignActivity"></activity>
+        <activity android:name=".User.SignActivity"></activity>
         <activity android:name=".GpsActivity"></activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".User.LoginActivity"></activity>
         <activity android:name=".BarActivity"></activity>
         <activity android:name=".BuylistActivity"></activity>
         <activity android:name=".SelllistActivity"></activity>
