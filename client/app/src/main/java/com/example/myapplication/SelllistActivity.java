@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+// 판매내역
 public class SelllistActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

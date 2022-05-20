@@ -34,10 +34,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="143dp"
-        android:layout_marginTop="14dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
         android:background="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="MissingConstraints">
@@ -46,40 +47,42 @@
             android:id="@+id/NickNameView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:layout_marginBottom="20dp"
-            android:text="별명"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="19dp"
             android:fontFamily="@font/nanumbarungothicbold"
+            android:text="별명"
             android:textColor="@color/black"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/IdView"
-            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/UserImageView"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/IdView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:layout_marginBottom="19dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/nanumbarungothicbold"
             android:text="아이디"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/DealScoreView"
-            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
+            app:layout_constraintStart_toEndOf="@+id/UserImageView"
+            app:layout_constraintTop_toBottomOf="@+id/NickNameView" />
 
         <TextView
             android:id="@+id/DealScoreView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="98dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="27dp"
             android:fontFamily="@font/nanumbarungothicbold"
             android:text="거래 점수"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
 
         <ImageView
             android:id="@+id/UserImageView"
@@ -88,7 +91,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:background="@drawable/user_image_border"
-            android:src="@drawable/cat"
+            android:src="@drawable/loading"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,10 +99,10 @@
             android:id="@+id/UserNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="19dp"
             android:text="user"
-            android:textSize="12sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/NickNameView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,10 +110,12 @@
             android:id="@+id/UserIdText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
             android:text="aaaaa1234"
-            android:textSize="12sp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
             app:layout_constraintStart_toEndOf="@+id/IdView"
             app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
 
@@ -118,13 +123,12 @@
             android:id="@+id/UserDealScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="27dp"
             android:text="89"
-            android:textColor="@color/purple_500"
-            android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/DealScoreView"
-            app:layout_constraintTop_toBottomOf="@+id/UserIdText" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -166,12 +170,12 @@
         android:id="@+id/PurchaseHistoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="47dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nanumbarungothicbold"
         android:text="구매내역"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PurchaseHistoryImage" />
 
@@ -179,12 +183,12 @@
         android:id="@+id/SalesHistoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nanumbarungothicbold"
         android:text="판매내역"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/PurchaseHistoryText"
         app:layout_constraintTop_toBottomOf="@+id/SalesHistoryButton" />
 
@@ -192,12 +196,12 @@
         android:id="@+id/InterestsList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="77dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nanumbarungothicbold"
         android:text="관심목록"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/SalesHistoryText"
         app:layout_constraintTop_toBottomOf="@+id/InterestsListImage" />
 

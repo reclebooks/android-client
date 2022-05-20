@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:layout_marginTop="14dp"
-        android:background="@color/light"
+        android:background="@drawable/border_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -96,34 +96,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:text="역사와 비판적 사고"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/NickNameView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/UserIdText"
+            app:layout_constraintStart_toEndOf="@+id/NickNameView" />
 
         <TextView
             android:id="@+id/UserIdText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:text="한빛 아카데미"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/IdView"
-            app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
+            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
+            app:layout_constraintStart_toEndOf="@+id/IdView" />
 
         <TextView
             android:id="@+id/UserDealScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="24dp"
             android:text="1000원"
             android:textColor="@color/red"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/DealScoreView"
-            app:layout_constraintTop_toBottomOf="@+id/UserIdText" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
