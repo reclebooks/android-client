@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="true"
+    tools:context=".PostActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+
+
+
+        <ImageView
+            android:id="@+id/backButtonFromDetailPage"
+            android:layout_width="37dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/PostNameView"
+            android:layout_width="323dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="[게시글 제목]"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/AuthorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:text="저자"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookNameTex" />
+
+        <TextView
+            android:id="@+id/BookNameTex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="21dp"
+            android:text="책 이름"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backButtonFromDetailPage" />
+
+        <TextView
+            android:id="@+id/PublisherText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="13dp"
+            android:text="출판사"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AuthorText" />
+
+        <TextView
+            android:id="@+id/Publication_Date_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="13dp"
+            android:text="출판년도"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PublisherText" />
+
+        <TextView
+            android:id="@+id/publication_Date_Text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="51dp"
+            android:text="가격(판매가,정가)"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text" />
+
+        <TextView
+            android:id="@+id/UserPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:text="9000원"
+            android:textColor="@color/purple_500"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/publication_Date_Text3"
+            app:layout_constraintTop_toBottomOf="@+id/CourseView" />
+
+        <TextView
+            android:id="@+id/OriginalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="9dp"
+            android:text="18000원"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/UserPrice"
+            app:layout_constraintTop_toBottomOf="@+id/CourseView" />
+
+        <TextView
+            android:id="@+id/publication_Date_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="11dp"
+            android:text="이 책을 사용하는 수업 : "
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Publication_Date_Text_View" />
+
+        <TextView
+            android:id="@+id/CourseView"
+            android:layout_width="209dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="30dp"
+            android:text="역사와 비판적 사고(AAA)"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Publication_Date_Text_View" />
+
+        <TextView
+            android:id="@+id/AuthorView"
+            android:layout_width="274dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="30dp"
+            android:text="홍길동"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookNameView" />
+
+        <TextView
+            android:id="@+id/BookNameView"
+            android:layout_width="274dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="30dp"
+            android:text="역사와 비판적 사고"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PostNameView" />
+
+        <TextView
+            android:id="@+id/PublisherView"
+            android:layout_width="274dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:text="한빛미디어"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AuthorView" />
+
+
+        <TextView
+            android:id="@+id/Publication_Date_Text_View"
+            android:layout_width="274dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:text="2020.04.21"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PublisherView" />
+
+        <ImageView
+            android:id="@+id/BookStateImageView"
+            android:layout_width="382dp"
+            android:layout_height="171dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/cat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookStateText" />
+
+        <TextView
+            android:id="@+id/BookStateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="책 상태"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text3" />
+
+        <TextView
+            android:id="@+id/SellerMemoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="판매자 메모"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookStateImageView" />
+
+        <EditText
+            android:id="@+id/SellerMemoTextView"
+            android:layout_width="385dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/box_border"
+            android:inputType="textMultiLine"
+            android:textSize="14sp"
+            android:enabled="false"
+            android:text="아아아아아아아아아아아아아아아아아아"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SellerMemoText" />
+
+        <ImageView
+            android:id="@+id/UserImageView"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/image_border"
+            android:src="@drawable/cat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SellerMemoTextView" />
+
+        <TextView
+            android:id="@+id/UserNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:text="판매자 별명"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/UserImageView"
+            app:layout_constraintTop_toBottomOf="@+id/SellerMemoTextView" />
+
+        <TextView
+            android:id="@+id/DealScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="23dp"
+            android:text="거래점수"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
+
+        <TextView
+            android:id="@+id/DealScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="23dp"
+            android:text="89"
+            android:textColor="@color/purple_500"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DealScoreText" />
+
+        <Button
+            android:id="@+id/ChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/btn_first"
+            android:text="채팅하기"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SellerMemoTextView" />
+
+        <ImageView
+            android:id="@+id/HeartLikeImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="23dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DealScore"
+            app:srcCompat="@drawable/heartlike" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
