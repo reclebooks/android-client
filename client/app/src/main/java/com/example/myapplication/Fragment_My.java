@@ -6,31 +6,45 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment_My extends Fragment
-{
-    ImageView interestListImageView;
+public class Fragment_My extends Fragment {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-    }
+    ImageView purchase_history;
+    ImageView SalesHistoryButton;
+    ImageView InterestsListImage;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v= inflater.inflate(R.layout.fragment_my, container, false);
 
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
-        View view = inflater.inflate(R.layout.fragment_my, container, false);
-        this.interestListImageView = view.findViewById(R.id.InterestsListImage);
-        this.interestListImageView.setOnClickListener(v ->
-        {
-            Toast.makeText(getActivity(), "Hello World!", Toast.LENGTH_SHORT).show();
+        purchase_history = v.findViewById (R.id.PurchaseHistoryImage);
+        SalesHistoryButton = v.findViewById (R.id.SalesHistoryButton);
+        InterestsListImage = v.findViewById (R.id.InterestsListImage);
+
+        purchase_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BuylistActivity.class);
+                startActivity(intent);
+            }
         });
-        return (view);
+
+        SalesHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SelllistActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        InterestsListImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), likelistActivity.class);
+                startActivity(intent);
+            }
+        });
+        return v;
     }
 }
