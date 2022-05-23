@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.example.myapplication.Book.FragmentHome;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BarActivity extends AppCompatActivity
@@ -21,6 +22,7 @@ public class BarActivity extends AppCompatActivity
         init();
         SettingListener();
         bottomNavigationView.setSelectedItemId(R.id.Home);
+
     }
     private void init()
     {

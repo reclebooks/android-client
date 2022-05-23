@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.myapplication.User.SignActivity;
+
 public class LoadingActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
