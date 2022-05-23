@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:isScrollContainer="true"
-    tools:context=".PostActivity"
+    tools:context=".Book.PostActivity"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
