@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 정보 페이지 -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_My">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/TitleTextView"
+        android:layout_width="323dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:text="내 정보"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/NickNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="별명"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/UserImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/IdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="아이디"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/DealScoreView"
+            app:layout_constraintStart_toEndOf="@+id/UserImageView"
+            app:layout_constraintTop_toBottomOf="@+id/NickNameView" />
+
+        <TextView
+            android:id="@+id/DealScoreView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="거래 점수"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
+
+        <ImageView
+            android:id="@+id/UserImageView"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/user_image_border"
+            android:src="@drawable/loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/UserNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="19dp"
+            android:text="user"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/NickNameView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/UserIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="aaaaa1234"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
+            app:layout_constraintStart_toEndOf="@+id/IdView"
+            app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
+
+        <TextView
+            android:id="@+id/UserDealScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="27dp"
+            android:text="89"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/PurchaseHistoryImage"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/image_border"
+        android:src="@drawable/purchase_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <ImageView
+        android:id="@+id/SalesHistoryButton"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="63dp"
+        android:background="@drawable/image_border"
+        android:src="@drawable/sales_icon"
+        app:layout_constraintEnd_toStartOf="@+id/InterestsListImage"
+        app:layout_constraintStart_toEndOf="@+id/PurchaseHistoryImage"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <ImageView
+        android:id="@+id/InterestsListImage"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="41dp"
+        android:background="@drawable/image_border"
+        android:src="@drawable/interests_list_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/PurchaseHistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:text="구매내역"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PurchaseHistoryImage" />
+
+    <TextView
+        android:id="@+id/SalesHistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:text="판매내역"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/PurchaseHistoryText"
+        app:layout_constraintTop_toBottomOf="@+id/SalesHistoryButton" />
+
+    <TextView
+        android:id="@+id/InterestsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:text="관심목록"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/SalesHistoryText"
+        app:layout_constraintTop_toBottomOf="@+id/InterestsListImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
