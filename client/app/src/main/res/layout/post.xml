@@ -187,19 +187,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PublisherView" />
 
-        <ImageView
-            android:id="@+id/BookStateImageView"
-            android:layout_width="382dp"
-            android:layout_height="171dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="20dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/cat"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BookStateText" />
-
         <TextView
             android:id="@+id/BookStateText"
             android:layout_width="wrap_content"
@@ -217,12 +204,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="19dp"
             android:text="판매자 메모"
             android:textColor="@color/purple_500"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BookStateImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <EditText
             android:id="@+id/SellerMemoTextView"
@@ -312,6 +299,25 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/DealScore"
             app:srcCompat="@drawable/heartlike" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="378dp"
+            android:layout_height="168dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookStateText">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
