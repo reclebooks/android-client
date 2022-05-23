@@ -46,7 +46,7 @@ public class FragmentHome extends Fragment
 
         this.writingButton.setOnClickListener(v ->
         {
-            Intent intent = new Intent(getActivity(), WritingActivity.class);
+            Intent intent = new Intent(getActivity(), PostActivity.class);
             startActivity(intent);
         });
         return (view);
