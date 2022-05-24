@@ -8,20 +8,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Book.BookAdapter;
 import com.example.myapplication.Book.OnPersonItemClickListener;
 
 import java.util.ArrayList;
 
-public class SellAdapter extends RecyclerView.Adapter<SellAdapter.ViewHolder>
+public class SellAdapter extends RecyclerView.Adapter<SellAdapter.ViewHolder> implements OnSellItemClickListener
 {
     ArrayList<SellDto> items = new ArrayList<SellDto>();
+    OnSellItemClickListener listener;
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View itemView = inflater.inflate(R.layout.sell_cycle_list, viewGroup, false);
-        return new ViewHolder(itemView, (OnPersonItemClickListener) this);
+    public SellAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View itemView = inflater.inflate(R.layout.sell_cycle_list, parent, false);
+        return new ViewHolder(itemView, this);
     }
 
     @Override
@@ -33,6 +35,17 @@ public class SellAdapter extends RecyclerView.Adapter<SellAdapter.ViewHolder>
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    public void setOnSellItemClickListener(OnSellItemClickListener listener)
+    {
+        this.listener = listener;
+    }
+
+    public void onItemClick(SellAdapter.ViewHolder holder, View view, int position)
+    {
+        if(listener != null)
+        { listener.onItemClick(holder,view,position); }
     }
 
     public void addItem(SellDto item) {
@@ -58,13 +71,23 @@ public class SellAdapter extends RecyclerView.Adapter<SellAdapter.ViewHolder>
         TextView book_time;
 
 
-        public ViewHolder(@NonNull View itemView, final OnPersonItemClickListener listener) {
+        public ViewHolder(@NonNull View itemView, final OnSellItemClickListener listener) {
             super(itemView);
 
             book_name = itemView.findViewById(R.id.book_name);
             book_made = itemView.findViewById(R.id.book_made);
             book_money = itemView.findViewById(R.id.book_money);
             book_time = itemView.findViewById(R.id.book_time);
+
+            itemView.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    int position = getAdapterPosition();
+                    if(listener != null)
+                    {
+                        listener.onItemClick(ViewHolder.this, v, position); } } });
 
         }
 
