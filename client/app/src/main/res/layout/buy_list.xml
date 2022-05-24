@@ -75,7 +75,7 @@
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/nanumbarungothicbold"
             android:text="가격"
-            android:textColor="@color/red"
+            android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -120,7 +120,7 @@
             android:layout_marginStart="56dp"
             android:layout_marginBottom="24dp"
             android:text="1000원"
-            android:textColor="@color/red"
+            android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
