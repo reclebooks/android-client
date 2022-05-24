@@ -20,7 +20,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         // 파라미터로 전달되는 뷰그룹 객체는 각 아이템을 위한 뷰그룹 객체이므로
         // XML 레이아웃을 인플레이션하여 이 뷰그룹 객체에 전달한다.
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.item_list, parent, false);
+        View itemView = inflater.inflate(R.layout.chatitem_list, parent, false);
 
         return new ViewHolder(itemView);
     }
@@ -57,19 +57,19 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     // 위에서 정의한 뷰홀더
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView tvPersonText;
         TextView tvPersonName;
-        TextView tvPersonPhoneNumber;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            tvPersonText = itemView.findViewById(R.id.tvPersonText);
             tvPersonName = itemView.findViewById(R.id.tvPersonName);
-            tvPersonPhoneNumber = itemView.findViewById(R.id.tvPersonPhoneNumber);
         }
 
         public void setItem(Person item) {
-            tvPersonName.setText(item.getName());
-            tvPersonPhoneNumber.setText(item.getPhoneNumber());
+            tvPersonText.setText(item.getContext());
+            tvPersonName.setText(item.getUserName());
         }
     }
     // ...

@@ -25,20 +25,13 @@ public class FragmentChat extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         adapter = new ChatListAdapter();
 
-        adapter.addItem(new Person("이름1", "거래 했어요"));
-        adapter.addItem(new Person("이름2", "010-2000-2000"));
-        adapter.addItem(new Person("이름3", "010-3000-3000"));
-        adapter.addItem(new Person("이름4", "010-4000-4000"));
-        adapter.addItem(new Person("이름5", "010-5000-5000"));
-        adapter.addItem(new Person("이름6", "010-6000-6000"));
-        adapter.addItem(new Person("이름7", "010-7000-7000"));
-        adapter.addItem(new Person("이름8", "010-8000-8000"));
-        adapter.addItem(new Person("이름9", "010-9000-9000"));
-        adapter.addItem(new Person("이름10", "010-1000-1000"));
-        adapter.addItem(new Person("이름11", "010-1100-1100"));
-        adapter.addItem(new Person("이름12", "010-1200-1200"));
-        adapter.addItem(new Person("이름13", "010-1300-1300"));
-        adapter.addItem(new Person("이름14", "010-1400-1400"));
+        adapter.addItem(new Person("전화주세요", "이름1"));
+        adapter.addItem(new Person("팔렸나요?", "이름2"));
+        adapter.addItem(new Person("중문에서 만나요", "이름3"));
+        adapter.addItem(new Person("얼마에요?", "이름4"));
+        adapter.addItem(new Person("안녕하세요", "이름5"));
+        adapter.addItem(new Person("책 상태가 어떻게 될까요", "이름6"));
+        adapter.addItem(new Person("사진좀 보내주세요", "이름7"));
 
         // 리사이클러뷰에 어댑터를 연결한다.
         recyclerView.setAdapter(adapter);

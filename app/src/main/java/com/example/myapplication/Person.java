@@ -1,26 +1,26 @@
 package com.example.myapplication;
 public class Person {
-    String name;
-    String phoneNumber;
+    String context;
+    String userName;
 
-    public Person(String name, String phoneNumber) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
+    public Person(String context, String userName) {
+        this.context = context;
+        this.userName = userName;
     }
 
-    public String getName() {
-        return name;
+    public String getContext() {
+        return context;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContext(String context) {
+        this.context = context;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
