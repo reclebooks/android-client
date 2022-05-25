@@ -41,7 +41,7 @@ public class Fragment_My extends Fragment {
         InterestsListImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), likelistActivity.class);
+                Intent intent = new Intent(getActivity(), LikeListActivity.class);
                 startActivity(intent);
             }
         });

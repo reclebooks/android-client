@@ -24,7 +24,6 @@
         android:layout_marginStart="17dp"
         android:layout_marginBottom="11dp"
         android:text="역사와 비판적 사고"
-        android:textSize="16dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/book_made"
         app:layout_constraintStart_toEndOf="@+id/imageView_book" />
@@ -36,7 +35,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="17dp"
         android:text="한빛 아카데미"
-        android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/book_money"
         app:layout_constraintStart_toEndOf="@+id/imageView_book" />
 
@@ -47,8 +45,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginBottom="11dp"
         android:text="15,000원"
-        android:textSize="16dp"
-        android:textColor="@color/black"
+        android:textColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/book_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.019"
@@ -61,7 +58,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:text="2020년 5월 17일"
-        android:textSize="13dp"
         app:layout_constraintStart_toEndOf="@+id/imageView_book"
         app:layout_constraintTop_toBottomOf="@+id/book_money" />
 </androidx.constraintlayout.widget.ConstraintLayout>
