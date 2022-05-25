@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LikeListActivity">
+    tools:context=".FragmentChat">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -15,27 +15,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="37dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <TextView
             android:id="@+id/TitleTextView"
             android:layout_width="323dp"
             android:layout_height="35dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/nanumbarungothicbold"
-            android:text="관심 목록"
+            android:text="대화 상대"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

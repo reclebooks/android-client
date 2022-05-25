@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.Book.Dto.BookListElementDto;
+import com.example.myapplication.PostActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.SellDto;
 
@@ -52,23 +55,12 @@ public class FragmentHome extends Fragment
 
         recyclerView.setAdapter(bookAdapter);
 
-        bookAdapter.setOnItemClicklistener(new OnPersonItemClickListener()
-        {
-            @Override
-            public void onItemClick(BookAdapter.ViewHolder holder, View view, int position)
-            {
-                BookListElementDto item = bookAdapter.getItem(position);
-                Intent intent = new Intent(getActivity(), PostActivity.class);
-                startActivity(intent);
-            }
-        });
         this.writingButton.setOnClickListener(v ->
         {
-            Intent intent = new Intent(getActivity(), WritingActivity.class);
+            Intent intent = new Intent(getActivity(), PostActivity.class);
             startActivity(intent);
         });
         return (view);
     }
 }
-
 

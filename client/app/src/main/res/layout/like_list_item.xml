@@ -1,45 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 구매 내역 -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="37dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
-
-    <TextView
-        android:id="@+id/TitleTextView"
-        android:layout_width="323dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/nanumbarungothicbold"
-        android:text="구매 내역 "
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/border_list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:ignore="MissingConstraints">
+    android:layout_height="125dp"
+    android:background="@drawable/border_list"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageView"
+    tools:ignore="MissingConstraints"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
         <TextView
             android:id="@+id/NickNameView"
@@ -96,34 +66,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:text="역사와 비판적 사고"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/UserIdText"
-            app:layout_constraintStart_toEndOf="@+id/NickNameView" />
+            app:layout_constraintStart_toEndOf="@+id/NickNameView"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/UserIdText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
             android:text="한빛 아카데미"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
-            app:layout_constraintStart_toEndOf="@+id/IdView" />
+            app:layout_constraintStart_toEndOf="@+id/IdView"
+            app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
 
         <TextView
             android:id="@+id/UserDealScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
             android:text="1000원"
             android:textColor="@color/red"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            app:layout_constraintStart_toEndOf="@+id/DealScoreView"
+            app:layout_constraintTop_toBottomOf="@+id/UserIdText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

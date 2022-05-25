@@ -14,7 +14,7 @@ public class BookCreateDto {
     private String professor; // 교수
     private String course; // 수업명
     // 이미지는 어떻게 받는지 모르겠다
-    private String bookstate; // 판매자메모
+    private String bookstate; // 수업명
 
     public void setBookstate(String bookstate)
     {

@@ -3,19 +3,13 @@ package com.example.myapplication;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 // 판매내역
 public class SelllistActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    SellAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sell_list);
-
         recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager1 = new LinearLayoutManager(recyclerView.getContext());
         recyclerView.setLayoutManager(layoutManager1);
@@ -35,5 +29,6 @@ public class SelllistActivity extends AppCompatActivity {
 
 
         recyclerView.setAdapter(adapter);
+
     }
 }

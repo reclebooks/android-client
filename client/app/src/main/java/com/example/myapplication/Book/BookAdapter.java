@@ -16,19 +16,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> implements OnPersonItemClickListener
-{
+public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
 
     ArrayList<BookListElementDto> items = new ArrayList<BookListElementDto>();
-    OnPersonItemClickListener listener;
-
     @NonNull
     @Override
     public BookAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View itemView = inflater.inflate(R.layout.book_list, parent, false);
 
-        return new ViewHolder(itemView,this);
+        return new ViewHolder(itemView);
     }
 
     @Override
@@ -41,16 +38,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> im
     public int getItemCount() {
         return items.size();
     }
-    public void setOnItemClicklistener(OnPersonItemClickListener listener)
-    {
-        this.listener = listener;
-    }
-    @Override
-    public void onItemClick(ViewHolder holder, View view, int position)
-    {
-        if(listener != null)
-        { listener.onItemClick(holder,view,position); }
-    }
+
     public void addItem(BookListElementDto item) {
         items.add(item);
     }
@@ -74,26 +62,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> im
         TextView book_time;
 
 
-        public ViewHolder(@NonNull View itemView, final OnPersonItemClickListener listener) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             book_name=itemView.findViewById(R.id.book_name);
             book_made=itemView.findViewById(R.id.book_made);
             book_money=itemView.findViewById(R.id.book_money);
             book_time=itemView.findViewById(R.id.book_time);
-
-            itemView.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    int position = getAdapterPosition();
-                    if(listener != null)
-                    {
-                        listener.onItemClick(ViewHolder.this, v, position); } } });
-
         }
-
 
         public void setItem(BookListElementDto item) {
             book_name.setText(item.getName());

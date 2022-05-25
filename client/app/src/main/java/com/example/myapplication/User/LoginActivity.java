@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // 별명 등록 버튼 누르면 dto 세팅, Gps로 넘어감
+        // 별명 등록 버튼 누르면 Gps로 넘어감
         certi_gps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
