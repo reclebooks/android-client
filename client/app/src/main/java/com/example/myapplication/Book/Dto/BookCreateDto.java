@@ -14,7 +14,8 @@ public class BookCreateDto {
     private String professor; // 교수
     private String course; // 수업명
     // 이미지는 어떻게 받는지 모르겠다
-    private String bookstate; // 판매자메모
+    private String bookstate; // 수업명
+    private Long user_price; // 판매 가격
 
     public void setBookstate(String bookstate)
     {
@@ -48,5 +49,9 @@ public class BookCreateDto {
     public void setCost(Long cost)
     {
         this.cost = cost;
+    }
+    public void setUser_price(Long user_price)
+    {
+        this.user_price = user_price;
     }
 }

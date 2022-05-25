@@ -96,7 +96,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/UserNameText"
+            android:id="@+id/BuyListBookName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
@@ -107,7 +107,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/UserIdText"
+            android:id="@+id/BuyListPublisher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
@@ -115,12 +115,12 @@
             android:layout_marginBottom="20dp"
             android:text="aaaaa1234"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
+            app:layout_constraintBottom_toTopOf="@+id/BuyListBookPrice"
             app:layout_constraintStart_toEndOf="@+id/IdView"
-            app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
+            app:layout_constraintTop_toBottomOf="@+id/BuyListBookName" />
 
         <TextView
-            android:id="@+id/UserDealScoreText"
+            android:id="@+id/BuyListBookPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
