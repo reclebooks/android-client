@@ -5,24 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="SelllistActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="37dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/TitleTextView"
-        android:layout_width="323dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/nanumbarungothicbold"
-        android:text="관심 목록"
-        android:textColor="@color/black"
-        android:textSize="20sp"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

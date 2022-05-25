@@ -25,6 +25,15 @@ public class SelllistActivity extends AppCompatActivity {
         adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+
+
+
         recyclerView.setAdapter(adapter);
     }
 }
