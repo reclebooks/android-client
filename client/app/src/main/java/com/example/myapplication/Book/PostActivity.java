@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Book;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -14,6 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.example.myapplication.R;
 
 import java.util.ArrayList;
 

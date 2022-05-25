@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:isScrollContainer="true"
-    tools:context=".PostActivity"
+    tools:context="Book.PostActivity"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -237,7 +237,7 @@
             android:layout_marginTop="8dp"
             android:adjustViewBounds="true"
             android:background="@drawable/image_border"
-            android:src="@drawable/cat"
+            android:src="@drawable/loading"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/SellerMemoTextView" />
 

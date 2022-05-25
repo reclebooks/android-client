@@ -1,39 +1,34 @@
-package com.example.myapplication.Book;
-
-
-import com.example.myapplication.Book.Dto.BookListElementDto;
-import com.example.myapplication.R;
+package com.example.myapplication;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Book.BookAdapter;
+import com.example.myapplication.Book.OnPersonItemClickListener;
+
 import java.util.ArrayList;
-import java.util.List;
 
-public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> implements OnPersonItemClickListener
+public class SellAdapter extends RecyclerView.Adapter<SellAdapter.ViewHolder> implements OnSellItemClickListener
 {
-
-    ArrayList<BookListElementDto> items = new ArrayList<BookListElementDto>();
-    OnPersonItemClickListener listener;
+    ArrayList<SellDto> items = new ArrayList<SellDto>();
+    OnSellItemClickListener listener;
 
     @NonNull
     @Override
-    public BookAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SellAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.book_list, parent, false);
-
-        return new ViewHolder(itemView,this);
+        View itemView = inflater.inflate(R.layout.sell_cycle_list, parent, false);
+        return new ViewHolder(itemView, this);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookAdapter.ViewHolder holder, int position) {
-        BookListElementDto item = items.get(position);
+    public void onBindViewHolder(@NonNull SellAdapter.ViewHolder holder, int position) {
+        SellDto item = items.get(position);
         holder.setItem(item);
     }
 
@@ -41,29 +36,31 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> im
     public int getItemCount() {
         return items.size();
     }
-    public void setOnItemClicklistener(OnPersonItemClickListener listener)
+
+    public void setOnSellItemClickListener(OnSellItemClickListener listener)
     {
         this.listener = listener;
     }
-    @Override
-    public void onItemClick(ViewHolder holder, View view, int position)
+
+    public void onItemClick(SellAdapter.ViewHolder holder, View view, int position)
     {
         if(listener != null)
         { listener.onItemClick(holder,view,position); }
     }
-    public void addItem(BookListElementDto item) {
+
+    public void addItem(SellDto item) {
         items.add(item);
     }
 
-    public void setItems(ArrayList<BookListElementDto> items) {
+    public void setItems(ArrayList<SellDto> items) {
         this.items = items;
     }
 
-    public BookListElementDto getItem(int position) {
+    public SellDto getItem(int position) {
         return items.get(position);
     }
 
-    public void setItem(int position, BookListElementDto item) {
+    public void setItem(int position, SellDto item) {
         items.set(position, item);
     }
 
@@ -74,13 +71,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> im
         TextView book_time;
 
 
-        public ViewHolder(@NonNull View itemView, final OnPersonItemClickListener listener) {
+        public ViewHolder(@NonNull View itemView, final OnSellItemClickListener listener) {
             super(itemView);
 
-            book_name=itemView.findViewById(R.id.book_name);
-            book_made=itemView.findViewById(R.id.book_made);
-            book_money=itemView.findViewById(R.id.book_money);
-            book_time=itemView.findViewById(R.id.book_time);
+            book_name = itemView.findViewById(R.id.book_name);
+            book_made = itemView.findViewById(R.id.book_made);
+            book_money = itemView.findViewById(R.id.book_money);
+            book_time = itemView.findViewById(R.id.book_time);
 
             itemView.setOnClickListener(new View.OnClickListener()
             {
@@ -94,8 +91,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> im
 
         }
 
-
-        public void setItem(BookListElementDto item) {
+        public void setItem(SellDto item) {
             book_name.setText(item.getName());
             book_made.setText(item.getBook());
             book_money.setText(item.getMoney());
