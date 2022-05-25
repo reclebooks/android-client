@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.Book.Dto.BookListElementDto;
 import com.example.myapplication.R;
-import com.example.myapplication.SellDto;
 
 public class FragmentHome extends Fragment
 {
