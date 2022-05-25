@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 구매 내역 -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".BuylistActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,100 +29,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/buy_list_recyclerView"
+        android:layout_width="410dp"
+        android:layout_height="592dp"
         android:layout_marginTop="14dp"
-        android:background="@drawable/border_list"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/NickNameView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/nanumbarungothicbold"
-            android:text="책 제목"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/IdView"
-            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
-
-        <TextView
-            android:id="@+id/IdView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/nanumbarungothicbold"
-            android:text="출판사"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/DealScoreView"
-            app:layout_constraintStart_toEndOf="@+id/UserImageView" />
-
-        <TextView
-            android:id="@+id/DealScoreView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="140dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/nanumbarungothicbold"
-            android:text="가격"
-            android:textColor="@color/red"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/UserImageView"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/buy_image_border"
-            android:src="@drawable/buy"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/UserNameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginBottom="16dp"
-            android:text="역사와 비판적 사고"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/UserIdText"
-            app:layout_constraintStart_toEndOf="@+id/NickNameView" />
-
-        <TextView
-            android:id="@+id/UserIdText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginBottom="16dp"
-            android:text="한빛 아카데미"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
-            app:layout_constraintStart_toEndOf="@+id/IdView" />
-
-        <TextView
-            android:id="@+id/UserDealScoreText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginBottom="24dp"
-            android:text="1000원"
-            android:textColor="@color/red"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/DealScoreView" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/TitleTextView"
+        app:layout_constraintVertical_bias="0.966" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

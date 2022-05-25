@@ -27,10 +27,10 @@
         <activity android:name=".User.LoginActivity"></activity>
         <activity android:name=".BarActivity"></activity>
         <activity android:name=".PostActivity"></activity>
-        <activity android:name=".BuylistActivity"></activity>
         <activity android:name=".SelllistActivity"></activity>
         <activity android:name=".likelistActivity"></activity>
         <activity android:name=".Book.WritingActivity"></activity>
+        <activity android:name=".BuylistActivity"></activity>
     </application>
 
 </manifest>

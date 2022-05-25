@@ -92,7 +92,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/UserNameText"
+            android:id="@+id/BuyListBookName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
@@ -103,18 +103,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/UserIdText"
+            android:id="@+id/BuyListPublisher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:layout_marginBottom="16dp"
             android:text="한빛 아카데미"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/UserDealScoreText"
+            app:layout_constraintBottom_toTopOf="@+id/BuyListBookPrice"
             app:layout_constraintStart_toEndOf="@+id/IdView" />
 
         <TextView
-            android:id="@+id/UserDealScoreText"
+            android:id="@+id/BuyListBookPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
