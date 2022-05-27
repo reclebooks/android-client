@@ -53,11 +53,24 @@ public class FragmentHome extends Fragment
 
         recyclerView.setAdapter(bookAdapter);
 
+        bookAdapter.setOnItemClicklistener(new OnPersonItemClickListener()
+        {
+            @Override
+            public void onItemClick(BookAdapter.ViewHolder holder, View view, int position)
+            {
+                BookListElementDto item = bookAdapter.getItem(position);
+                Intent intent = new Intent(getActivity(), PostActivity.class);
+                startActivity(intent);
+            }
+        });
+
         this.writingButton.setOnClickListener(v ->
         {
-            Intent intent = new Intent(getActivity(), PostActivity.class);
+            Intent intent = new Intent(getActivity(), WritingActivity.class);
             startActivity(intent);
         });
+
+
         return (view);
     }
 }
