@@ -26,9 +26,9 @@
         <activity android:name=".GpsActivity"></activity>
         <activity android:name=".User.LoginActivity"></activity>
         <activity android:name=".BarActivity"></activity>
-        <activity android:name=".PostActivity"></activity>
+        <activity android:name=".Book.PostActivity"></activity>
         <activity android:name=".SelllistActivity"></activity>
-        <activity android:name=".likelistActivity"></activity>
+        <activity android:name=".LikeListActivity"></activity>
         <activity android:name=".Book.WritingActivity"></activity>
         <activity android:name=".BuylistActivity"></activity>
     </application>
