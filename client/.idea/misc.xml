@@ -34,15 +34,15 @@
         <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/image_border.xml" value="0.113" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/upload_image_border.xml" value="0.325" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/user_image_border.xml" value="0.113" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/buy_cycle_list.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_chat.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_home.xml" value="0.33240740740740743" />
-        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_my.xml" value="0.7856701667696109" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_my.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/log_in.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/post.xml" value="0.35185185185185186" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/sign_up.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/view_pager_image.xml" value="0.3578125" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/writing.xml" value="0.5" />
-        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_my.xml" value="0.3619791666666667" />
       </map>
     </option>
   </component>
