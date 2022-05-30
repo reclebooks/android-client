@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Book.Dto.BookDetailDto;
 import com.example.myapplication.Book.Dto.BookListElementDto;
 import com.example.myapplication.R;
 
@@ -42,9 +43,9 @@ public class FragmentHome extends Fragment
         bookAdapter = new BookAdapter();
 
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        bookAdapter.addItem(new BookListElementDto("컴퓨터 구조", "생능 출판사","15,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        bookAdapter.addItem(new BookListElementDto("컴퓨터 구조", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
@@ -59,7 +60,9 @@ public class FragmentHome extends Fragment
             public void onItemClick(BookAdapter.ViewHolder holder, View view, int position)
             {
                 BookListElementDto item = bookAdapter.getItem(position);
+                BookDetailDto bookDetailDto = new BookDetailDto(item.getName(), item.getBook(), item.getMoney(),  item.getDay());
                 Intent intent = new Intent(getActivity(), PostActivity.class);
+                PostActivity.setData(bookDetailDto);
                 startActivity(intent);
             }
         });
