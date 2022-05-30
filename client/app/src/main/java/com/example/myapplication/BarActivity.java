@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.myapplication.Book.FragmentHome;
+import com.example.myapplication.Chat.FragmentChat;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BarActivity extends AppCompatActivity

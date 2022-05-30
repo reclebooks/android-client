@@ -58,7 +58,6 @@ public class FragmentHome extends Fragment
             @Override
             public void onItemClick(BookAdapter.ViewHolder holder, View view, int position)
             {
-                BookListElementDto item = bookAdapter.getItem(position);
                 Intent intent = new Intent(getActivity(), PostActivity.class);
                 startActivity(intent);
             }
