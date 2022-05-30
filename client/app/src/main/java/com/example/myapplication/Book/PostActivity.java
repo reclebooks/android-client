@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.myapplication.Book.Dto.BookDetailDto;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
@@ -67,10 +69,23 @@ class ViewPagerAdapter extends PagerAdapter
 
 public class PostActivity extends AppCompatActivity
 {
+    private static BookDetailDto bookDetailDto;
+
+    public static void setData(BookDetailDto bookDetailDto)
+    {
+        PostActivity.bookDetailDto = bookDetailDto;
+    }
+
     private ArrayList<Integer> imageList;
 
     ImageView heartLikeImage;
     ImageView backButtonFromDetailPage;
+
+    TextView bookNameView;
+    TextView publisherView;
+    TextView userPrice;
+    TextView publicationDateTextView;
+
     boolean isInterested = false;
 
     public void initializeData()
@@ -115,5 +130,15 @@ public class PostActivity extends AppCompatActivity
 
         this.backButtonFromDetailPage = findViewById(R.id.backButtonFromDetailPage);
         this.backButtonFromDetailPage.setOnClickListener(view -> finish());
+
+        this.bookNameView = findViewById(R.id.BookNameView);
+        this.publisherView = findViewById(R.id.PublisherView);
+        this.userPrice = findViewById(R.id.UserPrice);
+        this.publicationDateTextView = findViewById(R.id.Publication_Date_Text_View);
+
+        this.bookNameView.setText(bookDetailDto.getTitle());
+        this.publisherView.setText(bookDetailDto.getBook_made());
+        this.userPrice.setText(bookDetailDto.getCost());
+        this.publicationDateTextView.setText(bookDetailDto.getPublish_date());
     }
 }
