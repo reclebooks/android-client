@@ -69,7 +69,6 @@ public class PostActivity extends AppCompatActivity
 {
     private ArrayList<Integer> imageList;
 
-    Button ChatButton;
     ImageView heartLikeImage;
     ImageView backButtonFromDetailPage;
     boolean isInterested = false;

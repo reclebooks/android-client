@@ -34,6 +34,7 @@ public class FragmentChat extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         adapter = new ChatListAdapter();
 
+        // 마지막 멘트, 상대방 이름
         adapter.addItem(new Person("전화주세요", "이름1"));
         adapter.addItem(new Person("팔렸나요?", "이름2"));
         adapter.addItem(new Person("중문에서 만나요", "이름3"));
