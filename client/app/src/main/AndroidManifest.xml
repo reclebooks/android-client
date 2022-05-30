@@ -32,6 +32,7 @@
         <activity android:name=".LikeListActivity"></activity>
         <activity android:name=".Book.WritingActivity"></activity>
         <activity android:name=".BuylistActivity"></activity>
+        <activity android:name=".Chat.ChatActivity"></activity>
     </application>
 
 </manifest>
