@@ -19,7 +19,7 @@
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
         android:text="내가 보낸 메세지"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
