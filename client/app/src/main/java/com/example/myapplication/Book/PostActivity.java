@@ -1,6 +1,7 @@
 package com.example.myapplication.Book;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.myapplication.Book.Dto.BookDetailDto;
+import com.example.myapplication.Chat.ChatActivity;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
@@ -86,6 +88,8 @@ public class PostActivity extends AppCompatActivity
     TextView userPrice;
     TextView publicationDateTextView;
 
+    Button ChatButton;
+
     boolean isInterested = false;
 
     public void initializeData()
@@ -126,6 +130,15 @@ public class PostActivity extends AppCompatActivity
                 this.heartLikeImage.setColorFilter(null);
                 isInterested = false;
             }
+        });
+
+        this.ChatButton = findViewById(R.id.ChatButton);
+        this.ChatButton.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+            // 자기이름을 넘김
+            intent.putExtra("username", "user1");
+            intent.putExtra("roomNumber", "1");
+            startActivity(intent);
         });
 
         this.backButtonFromDetailPage = findViewById(R.id.backButtonFromDetailPage);
