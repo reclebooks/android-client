@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.content.CursorLoader;
@@ -77,6 +78,11 @@ public class ChatActivity extends AppCompatActivity {
         binding.recyclerView.setLayoutManager(layoutManager);
         binding.recyclerView.setAdapter(adapter);
 
+
+        binding.btnfinish.setOnClickListener(v -> {
+            binding.state1.setText("  판매완료");
+            Toast.makeText(getApplicationContext(), "판매완료 처리 되었습니다.", Toast.LENGTH_SHORT).show();
+        });
         // 메시지 전송 버튼
         binding.sendBtn.setOnClickListener(v -> sendMessage());
         // 이미지 전송 버튼
