@@ -45,7 +45,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginBottom="11dp"
         android:text="15,000원"
-        android:textColor="@color/red"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/book_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.019"
