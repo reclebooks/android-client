@@ -23,33 +23,27 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:background="@drawable/btn_first"
         android:fontFamily="@font/nanum"
         android:text="내 위치 설정하기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/juso"
         android:layout_width="match_parent"
         android:layout_height="28dp"
-        android:layout_marginStart="0dp"
         android:layout_marginTop="132dp"
         android:layout_weight="1"
         android:background="@drawable/spinner_background"
         android:fontFamily="@font/nanum"
         android:spinnerMode="dropdown"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/nextbutton"
