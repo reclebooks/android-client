@@ -8,26 +8,14 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/btn_first.xml" value="0.1055" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/btn_log.xml" value="0.1055" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/buy_image_border.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/ic_chat_left_item.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/ic_chat_right_item.xml" value="0.1085" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/ic_gallery_button.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/ic_item_border.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/ic_send_button.xml" value="0.1085" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/spinner_background.xml" value="0.1835" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/drawable/user_image_border.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/font/font.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/activity_chat.xml" value="0.175" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/activity_main2.xml" value="0.175" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/bar.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/book_list.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/buy_list.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/chat_center_item.xml" value="0.175" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/chat_left_image.xml" value="0.175" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/chat_left_item.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/chat_right_item.xml" value="0.175" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/chatitem_list.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/chatlist.xml" value="0.175" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/d.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/fragment_chat.xml" value="0.175" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/fragment_home.xml" value="0.175" />
@@ -37,25 +25,34 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/loading.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/log.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/log_in.xml" value="0.2041522491349481" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/post.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/sell_cycle_list.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/sell_list.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/sign_up.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/sign_ups.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/spinner_layout.xml" value="0.12364130434782608" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/layout/writing.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/android-client/client/app/src/main/res/menu/menu_bottomnavi.xml" value="0.1" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/ic_chat_right_item.xml" value="0.213" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/image_border.xml" value="0.113" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/upload_image_border.xml" value="0.325" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/drawable/user_image_border.xml" value="0.113" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/buy_cycle_list.xml" value="0.3619791666666667" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/buy_list.xml" value="0.3578125" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/chat_center_item.xml" value="0.3564102564102564" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/chat_left_image.xml" value="0.3564102564102564" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/chat_left_item.xml" value="0.3564102564102564" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/chat_right_image.xml" value="0.3564102564102564" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/chat_right_item.xml" value="0.3564102564102564" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/chatitem_list.xml" value="0.3578125" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_chat.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_home.xml" value="0.33240740740740743" />
-        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_my.xml" value="0.3619791666666667" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/fragment_my.xml" value="0.33" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/like_list.xml" value="0.31574074074074077" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/log_in.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/post.xml" value="0.35185185185185186" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/sell_list.xml" value="0.31574074074074077" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/sign_up.xml" value="0.3619791666666667" />
         <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/view_pager_image.xml" value="0.3578125" />
-        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/writing.xml" value="0.5" />
+        <entry key="..\:/reclebooks-android/client/app/src/main/res/layout/writing.xml" value="0.33" />
       </map>
     </option>
   </component>
