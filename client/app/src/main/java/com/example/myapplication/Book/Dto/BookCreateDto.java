@@ -1,5 +1,7 @@
 package com.example.myapplication.Book.Dto;
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,51 +9,60 @@ import lombok.Setter;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 public class BookCreateDto {
-    private Long cost; // 책 가격
-    private String title; // 책 제목
-    private String author; // 저자
-    private String publish_date; // 출판년도
-    private String professor; // 교수
-    private String course; // 수업명
-    // 이미지는 어떻게 받는지 모르겠다
-    private String bookstate; // 수업명
-    private Long user_price; // 판매 가격
+    String name;
+    Long cost;
+    LectureCreateDto lecture;
+    AuthorCreateDto author;
+    PublisherCreateDto publisher;
+    ProfessorCreateDto professor;
+    Date publishedDate;
+    String[] genres;
 
-    public void setBookstate(String bookstate)
-    {
-        this.bookstate = bookstate;
+    public String getName() {
+        return name;
     }
 
-    public void setCourse(String course)
-    {
-        this.course = course;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setProfessor(String professor)
-    {
+    public Long getCost() {
+        return cost;
+    }
+
+    public void setCost(Long cost) {
+        this.cost = cost;
+    }
+
+    public LectureCreateDto getLecture() {
+        return lecture;
+    }
+
+    public void setLecture(LectureCreateDto lecture) {
+        this.lecture = lecture;
+    }
+
+    public ProfessorCreateDto getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(ProfessorCreateDto professor) {
         this.professor = professor;
     }
 
-    public void setPublish_date(String publish_date)
-    {
-        this.publish_date = publish_date;
+    public Date getPublishedDate() {
+        return publishedDate;
     }
 
-    public void setAuthor(String author)
-    {
-        this.author = author;
+    public void setPublishedDate(Date publishedDate) {
+        this.publishedDate = publishedDate;
     }
 
-    public void setTitle(String title)
-    {
-        this.title = title;
+    public String[] getGenres() {
+        return genres;
     }
-    public void setCost(Long cost)
-    {
-        this.cost = cost;
-    }
-    public void setUser_price(Long user_price)
-    {
-        this.user_price = user_price;
+
+    public void setGenres(String[] genres) {
+        this.genres = genres;
     }
 }

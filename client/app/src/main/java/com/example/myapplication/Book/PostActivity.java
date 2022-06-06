@@ -18,7 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.myapplication.Book.Dto.BookDetailDto;
+import com.example.myapplication.Book.Dto.Book;
+import com.example.myapplication.Book.Dto.BookCreateDto;
 import com.example.myapplication.Chat.ChatActivity;
 import com.example.myapplication.R;
 
@@ -71,11 +72,11 @@ class ViewPagerAdapter extends PagerAdapter
 
 public class PostActivity extends AppCompatActivity
 {
-    private static BookDetailDto bookDetailDto;
+    private static Book bookCreateDto;
 
-    public static void setData(BookDetailDto bookDetailDto)
+    public static void setData(Book bookCreateDto)
     {
-        PostActivity.bookDetailDto = bookDetailDto;
+        PostActivity.bookCreateDto = bookCreateDto;
     }
 
     private ArrayList<Integer> imageList;
@@ -149,9 +150,9 @@ public class PostActivity extends AppCompatActivity
         this.userPrice = findViewById(R.id.UserPrice);
         this.publicationDateTextView = findViewById(R.id.Publication_Date_Text_View);
 
-        this.bookNameView.setText(bookDetailDto.getTitle());
-        this.publisherView.setText(bookDetailDto.getBook_made());
-        this.userPrice.setText(bookDetailDto.getCost());
-        this.publicationDateTextView.setText(bookDetailDto.getPublish_date());
+        this.bookNameView.setText(bookCreateDto.getUsedBookCreateDto().getBook().getName());
+        this.publisherView.setText(bookCreateDto.getPublisherCreateDto().getName());
+        this.userPrice.setText(String.valueOf(bookCreateDto.getUsedBookCreateDto().getBook().getCost().toString()));
+        this.publicationDateTextView.setText(bookCreateDto.getUsedBookCreateDto().getBook().getPublishedDate().toString());
     }
 }
