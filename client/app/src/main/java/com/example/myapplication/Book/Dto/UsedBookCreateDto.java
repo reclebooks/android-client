@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,6 +18,11 @@ public class UsedBookCreateDto {
     Boolean penNote;
     Boolean bookCoverStatus;
     Boolean pageStatus;
+
+    public UsedBookCreateDto()
+    {
+        this.book = new BookCreateDto();
+    }
 
     public String getContent() {
         return content;

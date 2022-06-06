@@ -9,10 +9,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
+
 public class MajorCollegeCreateDto {
     String name;
     CollegeCreateDto collegeCreateDto;
+
+    public MajorCollegeCreateDto()
+    {
+        this.collegeCreateDto = new CollegeCreateDto();
+    }
 
     public String getName() {
         return name;

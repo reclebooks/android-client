@@ -1,9 +1,9 @@
-package com.example.myapplication;
-public class Person {
+package com.example.myapplication.Chat.Dto;
+public class ChatListDto {
     String context;
     String userName;
 
-    public Person(String context, String userName) {
+    public ChatListDto(String context, String userName) {
         this.context = context;
         this.userName = userName;
     }

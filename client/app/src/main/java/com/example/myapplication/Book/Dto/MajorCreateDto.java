@@ -9,10 +9,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 public class MajorCreateDto {
     String name;
     MajorCollegeCreateDto majorCollegeCreateDto;
+
+    public MajorCreateDto()
+    {
+        this.majorCollegeCreateDto = new MajorCollegeCreateDto();
+    }
 
     public String getName() {
         return name;

@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -81,7 +82,8 @@ public class WritingActivity extends AppCompatActivity
 
     Button WriteButton;
     EditText BookPriceMemo, BookTitleMemo,BookAuthorMemo,BookPublishingDateMemo,ProfessorMemo,CourseMemo
-            ,BookStateMemo, BookPriceInput;
+            ,BookStateMemo, BookPriceInput,SchoolCollegeMemo,SchoolNameMemo,SchoolMajorMemo;
+    CheckBox underLineCheck, penUnderlineCheck, note,penNote,bookCoverStatus,pageStatus;
     @Override
     @SuppressWarnings("deprecation")
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -92,13 +94,24 @@ public class WritingActivity extends AppCompatActivity
         BookPriceMemo= (EditText) findViewById(R.id.BookPublishingDateMemo); // 가격
         BookTitleMemo= (EditText) findViewById(R.id.BookTitleMemo); // 책제목
         BookAuthorMemo= (EditText) findViewById(R.id.BookAuthorMemo); // 저자
-        BookPublishingDateMemo=(EditText) findViewById(R.id.BookPublisherMemo); // 출판년도
+        SchoolCollegeMemo=(EditText) findViewById(R.id.SchoolCollegeMemo);// 단과대
+        SchoolNameMemo=(EditText) findViewById(R.id.SchoolNameMemo);// 학교
+        SchoolMajorMemo=(EditText) findViewById(R.id.SchoolMajorMemo);
+        BookPublishingDateMemo=(EditText) findViewById(R.id.BookPublishingDateMemo); // 출판년도
         ProfessorMemo=(EditText) findViewById(R.id.ProfessorMemo); // 교수
         CourseMemo=(EditText) findViewById(R.id.CourseMemo); // 수업명
         BookStateMemo=(EditText) findViewById(R.id.BookStateMemo); // 책 상태
         BookPriceInput = findViewById(R.id.BookPriceInput); // 판매 책 가격
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
+        underLineCheck=findViewById(R.id.UnderlineCheck);
+        penUnderlineCheck=findViewById(R.id.PenUnderlineCheck);
+        note=findViewById(R.id.NoteCheck);
+        penNote=findViewById(R.id.PenNoteCheck);
+        bookCoverStatus=findViewById(R.id.BookCoverStatusCheck);
+        pageStatus=findViewById(R.id.PageStatusCheck);
+
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
 
         this.bookStateImage1 = findViewById(R.id.BookStateImage1);
         this.bookStateImage2 = findViewById(R.id.BookStateImage2);
@@ -142,22 +155,30 @@ public class WritingActivity extends AppCompatActivity
                 {
                     // 작성하기 버튼 누르면, 정보가 DB로 넘어가면서 메인화면으로 연결
                     UsedBookCreateDto usedBookCreateDto=new UsedBookCreateDto();
+                    System.out.println(BookTitleMemo.getText());
                     usedBookCreateDto.getBook().setName(String.valueOf(BookTitleMemo.getText())); // 책제목
                     usedBookCreateDto.getBook().setCost(Long.valueOf((String.valueOf(BookPriceMemo.getText()))));// 가격_정가
                     usedBookCreateDto.getBook().getLecture().setName(String.valueOf(CourseMemo.getText()));// 강의명
                     usedBookCreateDto.getBook().getProfessor().setName(String.valueOf(ProfessorMemo.getText()));// 교수명
                     usedBookCreateDto.getBook().setPublishedDate(dateFormat.parse(String.valueOf(BookPublishingDateMemo.getText())));// 출판년도
                     //학교
-                    //usedBookCreateDto.getBook().getLecture().getMajorCreateDto().getMajorCollegeCreateDto().getCollegeCreateDto().setName();
+                    usedBookCreateDto.getBook().getLecture().getMajorCreateDto().getMajorCollegeCreateDto().getCollegeCreateDto().setName(String.valueOf(SchoolNameMemo.getText()));
                     // 단과대
-                    //usedBookCreateDto.getBook().getLecture().getMajorCreateDto().getMajorCollegeCreateDto().setName();
+                    usedBookCreateDto.getBook().getLecture().getMajorCreateDto().getMajorCollegeCreateDto().setName(String.valueOf(SchoolCollegeMemo.getText()));
                     // 전공
-                    //usedBookCreateDto.getBook().getLecture().getMajorCreateDto().setName();
+                    usedBookCreateDto.getBook().getLecture().getMajorCreateDto().setName(String.valueOf(SchoolMajorMemo.getText()));
                     // 판매가
                     usedBookCreateDto.setUsedBookCost(Long.valueOf((String.valueOf(BookPriceInput.getText()))));
                     // 판메자 메모
+                    usedBookCreateDto.setContent(String.valueOf(BookStateMemo.getText()));
                     // 체크박스(6개)
 
+                    usedBookCreateDto.setUnderline(underLineCheck.isChecked());
+                    usedBookCreateDto.setPenUnderline(penUnderlineCheck.isChecked());
+                    usedBookCreateDto.setNote(note.isChecked());
+                    usedBookCreateDto.setPenNote(penNote.isChecked());
+                    usedBookCreateDto.setBookCoverStatus(bookCoverStatus.isChecked());
+                    usedBookCreateDto.setPageStatus(pageStatus.isChecked());
 
 
                     Intent intent = new Intent(getApplicationContext(), BarActivity.class);
@@ -165,10 +186,12 @@ public class WritingActivity extends AppCompatActivity
                 }
                 catch (Exception exception)
                 {
+                    exception.printStackTrace();
                     Toast.makeText(getApplicationContext(), "모든 항목을 입력해주세요.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
 
     }

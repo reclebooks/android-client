@@ -8,10 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 public class LectureCreateDto {
     String name;
     MajorCreateDto majorCreateDto;
+
+    public LectureCreateDto(){
+        this.majorCreateDto = new MajorCreateDto();
+    }
 
     public MajorCreateDto getMajorCreateDto() {
         return majorCreateDto;

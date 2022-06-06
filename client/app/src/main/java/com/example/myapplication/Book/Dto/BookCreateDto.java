@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+@Getter @Setter @AllArgsConstructor
 public class BookCreateDto {
     String name;
     Long cost;
@@ -17,6 +17,13 @@ public class BookCreateDto {
     ProfessorCreateDto professor;
     Date publishedDate;
     String[] genres;
+
+    public BookCreateDto()
+    {
+        this.lecture = new LectureCreateDto();
+        this.author = new AuthorCreateDto();
+        this.professor = new ProfessorCreateDto();
+    }
 
     public String getName() {
         return name;
