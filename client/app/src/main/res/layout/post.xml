@@ -17,8 +17,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
-            android:layout_width="366dp"
-            android:layout_height="235dp"
+            android:layout_width="368dp"
+            android:layout_height="481dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/box_border_post"
@@ -26,39 +26,103 @@
             app:layout_constraintTop_toBottomOf="@+id/backButtonFromDetailPage">
 
             <TextView
-                android:id="@+id/publication_Date_Text3"
+                android:id="@+id/PageClean"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="가격(판매가)"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text" />
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="19dp"
+                android:text="없음"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/publication_Date_Text7"
+                app:layout_constraintTop_toBottomOf="@+id/BookCoverClean" />
 
             <TextView
-                android:id="@+id/UserPrice"
+                android:id="@+id/PageCleanNot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:text="9000원"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                app:layout_constraintStart_toEndOf="@+id/publication_Date_Text3"
-                app:layout_constraintTop_toBottomOf="@+id/CourseView" />
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="19dp"
+                android:text="있음"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/PageClean"
+                app:layout_constraintTop_toBottomOf="@+id/BookCoverCleanNot" />
+
+            <TextView
+                android:id="@+id/BookCoverClean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="18dp"
+                android:text="깨끗함"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/publication_Date_Text6"
+                app:layout_constraintTop_toBottomOf="@+id/noteCheckNone" />
+
+            <TextView
+                android:id="@+id/BookCoverCleanNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="18dp"
+                android:text="깨끗하지 않음"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/BookCoverClean"
+                app:layout_constraintTop_toBottomOf="@+id/noteCheck" />
 
             <TextView
                 android:id="@+id/CourseView"
                 android:layout_width="275dp"
                 android:layout_height="16dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="13dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
                 android:text="역사와 비판적 사고(AAA)"
                 android:textSize="15dp"
                 app:layout_constraintStart_toEndOf="@+id/publication_Date_Text"
+                app:layout_constraintTop_toBottomOf="@+id/ProfessorNameView" />
+
+            <TextView
+                android:id="@+id/ProfessorNameView"
+                android:layout_width="275dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="16dp"
+                android:text="역사와 비판적 사고(AAA)"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/ProfessorNameText"
+                app:layout_constraintTop_toBottomOf="@+id/professorNameView3" />
+
+            <TextView
+                android:id="@+id/professorNameView"
+                android:layout_width="275dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="15dp"
+                android:text="충북대학교"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/professorNameText"
                 app:layout_constraintTop_toBottomOf="@+id/Publication_Date_Text_View" />
+
+            <TextView
+                android:id="@+id/professorNameView2"
+                android:layout_width="275dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="18dp"
+                android:text="전자정보대학"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/professorNameText2"
+                app:layout_constraintTop_toBottomOf="@+id/professorNameView" />
+
+            <TextView
+                android:id="@+id/professorNameView3"
+                android:layout_width="275dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="10dp"
+                android:text="소프트웨어학과"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/professorNameText3"
+                app:layout_constraintTop_toBottomOf="@+id/professorNameView2" />
 
             <TextView
                 android:id="@+id/Publication_Date_Text_View"
@@ -121,12 +185,166 @@
                 android:id="@+id/publication_Date_Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="13dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
                 android:text="수업명"
                 android:textSize="15dp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ProfessorNameText" />
+
+            <TextView
+                android:id="@+id/publication_Date_Text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:text="밑줄 흔적"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text" />
+
+            <TextView
+                android:id="@+id/underlineCheckNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:text="없음"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/publication_Date_Text4"
+                app:layout_constraintTop_toBottomOf="@+id/CourseView" />
+
+            <TextView
+                android:id="@+id/underlineCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="16dp"
+                android:text="연필/샤프"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/underlineCheckNone"
+                app:layout_constraintTop_toBottomOf="@+id/CourseView" />
+
+            <TextView
+                android:id="@+id/penUnderlineCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="16dp"
+                android:text="볼펜/형광펜"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/underlineCheck"
+                app:layout_constraintTop_toBottomOf="@+id/CourseView" />
+
+            <TextView
+                android:id="@+id/noteCheckNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:text="없음"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/publication_Date_Text5"
+                app:layout_constraintTop_toBottomOf="@+id/underlineCheckNone" />
+
+            <TextView
+                android:id="@+id/noteCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="16dp"
+                android:text="연필/샤프"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/noteCheckNone"
+                app:layout_constraintTop_toBottomOf="@+id/underlineCheck" />
+
+            <TextView
+                android:id="@+id/penNoteCheckP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="16dp"
+                android:text="볼펜/형광펜"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/noteCheck"
+                app:layout_constraintTop_toBottomOf="@+id/penUnderlineCheck" />
+
+            <TextView
+                android:id="@+id/publication_Date_Text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="필기 흔적"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text4" />
+
+            <TextView
+                android:id="@+id/publication_Date_Text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="겉표지"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text5" />
+
+            <TextView
+                android:id="@+id/publication_Date_Text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="19dp"
+                android:text="페이지 훼손"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text6" />
+
+            <TextView
+                android:id="@+id/ProfessorNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:text="교수명"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/professorNameText3" />
+
+            <TextView
+                android:id="@+id/professorNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="19dp"
+                android:text="학교"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Publication_Date_Text" />
+
+            <TextView
+                android:id="@+id/professorNameText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:text="단과대"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/professorNameText" />
+
+            <TextView
+                android:id="@+id/professorNameText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="전공"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/professorNameText2" />
 
             <TextView
                 android:id="@+id/Publication_Date_Text"
@@ -160,6 +378,30 @@
                 android:textSize="15dp"
                 app:layout_constraintStart_toEndOf="@+id/AuthorText"
                 app:layout_constraintTop_toBottomOf="@+id/BookNameView" />
+
+            <TextView
+                android:id="@+id/publication_Date_Text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="가격(판매가)"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publication_Date_Text7" />
+
+            <TextView
+                android:id="@+id/UserPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="23dp"
+                android:text="9000원"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/publication_Date_Text3"
+                app:layout_constraintTop_toBottomOf="@+id/PageClean" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
@@ -248,29 +490,6 @@
             app:layout_constraintStart_toEndOf="@+id/UserImageView"
             app:layout_constraintTop_toBottomOf="@+id/SellerMemoTextView" />
 
-        <TextView
-            android:id="@+id/DealScoreText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
-            android:text="거래점수"
-            android:textSize="14dp"
-            app:layout_constraintStart_toEndOf="@+id/UserImageView"
-            app:layout_constraintTop_toBottomOf="@+id/UserNameView" />
-
-        <TextView
-            android:id="@+id/DealScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="89"
-            android:textColor="@color/purple_500"
-            android:textSize="14dp"
-            app:layout_constraintStart_toEndOf="@+id/DealScoreText"
-            app:layout_constraintTop_toBottomOf="@+id/UserNameView" />
-
         <Button
             android:id="@+id/ChatButton"
             android:layout_width="wrap_content"
@@ -289,9 +508,9 @@
             android:id="@+id/HeartLikeImage"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="41dp"
             android:layout_marginTop="21dp"
-            app:layout_constraintStart_toEndOf="@+id/DealScore"
+            app:layout_constraintStart_toEndOf="@+id/UserNameView"
             app:layout_constraintTop_toBottomOf="@+id/SellerMemoTextView"
             app:srcCompat="@drawable/heartlike" />
 
