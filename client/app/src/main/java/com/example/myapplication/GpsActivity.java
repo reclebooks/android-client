@@ -23,6 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.myapplication.User.Dto.UserCreateDto;
+import com.example.myapplication.User.Dto.UserInfoCreateDto;
+import com.example.myapplication.User.LoginActivity;
+import com.example.myapplication.User.SignActivity;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -47,8 +52,14 @@ public class GpsActivity extends Activity {
         nextButton = (Button) findViewById(R.id.nextbutton);
         nextButton.setOnClickListener(new View.OnClickListener() {
 
+            // dto에 값 넘기기
             @Override
             public void onClick(View view) {
+                UserInfoCreateDto userInfoCreateDto=new UserInfoCreateDto();
+                System.out.println(userInfoCreateDto.getUserCreateDto());
+                userInfoCreateDto.getUserCreateDto().setPhone(SignActivity.phone);
+                userInfoCreateDto.setCollege(LoginActivity.college);
+                userInfoCreateDto.setCollege(LoginActivity.nickname);
                 Intent intent = new Intent(getApplicationContext(), BarActivity.class);
                 startActivity(intent);
             }

@@ -15,9 +15,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.BarActivity;
 import com.example.myapplication.Book.Dto.BookCreateDto;
+import com.example.myapplication.Book.Dto.LectureCreateDto;
+import com.example.myapplication.Book.Dto.UsedBookCreateDto;
 import com.example.myapplication.R;
+import com.example.myapplication.User.Dto.UserInfoCreateDto;
+import com.example.myapplication.User.SignActivity;
 
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class WritingActivity extends AppCompatActivity
 {
@@ -81,7 +88,6 @@ public class WritingActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.writing);
-        BookCreateDto bookCreateDto = new BookCreateDto();
         WriteButton= (Button) findViewById(R.id.WriteButton); // 작성하기 버튼
         BookPriceMemo= (EditText) findViewById(R.id.BookPriceMemo); // 가격
         BookTitleMemo= (EditText) findViewById(R.id.BookTitleMemo); // 책제목
@@ -91,6 +97,8 @@ public class WritingActivity extends AppCompatActivity
         CourseMemo=(EditText) findViewById(R.id.CourseMemo); // 수업명
         BookStateMemo=(EditText) findViewById(R.id.BookStateMemo); // 책 상태
         BookPriceInput = findViewById(R.id.BookPriceInput); // 판매 책 가격
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
 
         this.bookStateImage1 = findViewById(R.id.BookStateImage1);
         this.bookStateImage2 = findViewById(R.id.BookStateImage2);
@@ -132,15 +140,26 @@ public class WritingActivity extends AppCompatActivity
             {
                 try
                 {
-                    bookCreateDto.setCost(Long.valueOf(String.valueOf(BookPriceMemo.getText())));
-                    bookCreateDto.setTitle(String.valueOf(BookTitleMemo.getText()));
-                    bookCreateDto.setAuthor(String.valueOf(BookAuthorMemo.getText()));
-                    bookCreateDto.setPublish_date(String.valueOf(BookPublishingDateMemo.getText()));
-                    bookCreateDto.setProfessor(String.valueOf(ProfessorMemo.getText()));
-                    bookCreateDto.setCourse(String.valueOf(CourseMemo.getText()));
-                    bookCreateDto.setBookstate(String.valueOf(BookStateMemo.getText()));
-                    bookCreateDto.setUser_price(Long.parseLong(String.valueOf(BookPriceInput.getText())));
                     // 작성하기 버튼 누르면, 정보가 DB로 넘어가면서 메인화면으로 연결
+                    UsedBookCreateDto usedBookCreateDto=new UsedBookCreateDto();
+                    usedBookCreateDto.getBook().setName(String.valueOf(BookTitleMemo.getText())); // 책제목
+                    usedBookCreateDto.getBook().setCost(Long.valueOf((String.valueOf(BookPriceMemo.getText()))));// 가격_정가
+                    usedBookCreateDto.getBook().getLecture().setName(String.valueOf(CourseMemo.getText()));// 강의명
+                    usedBookCreateDto.getBook().getProfessor().setName(String.valueOf(ProfessorMemo.getText()));// 교수명
+                    usedBookCreateDto.getBook().setPublishedDate(dateFormat.parse(String.valueOf(BookPublishingDateMemo.getText())));// 출판년도
+                    //학교
+                    //usedBookCreateDto.getBook().getLecture().getMajorCreateDto().getMajorCollegeCreateDto().getCollegeCreateDto().setName();
+                    // 단과대
+                    //usedBookCreateDto.getBook().getLecture().getMajorCreateDto().getMajorCollegeCreateDto().setName();
+                    // 전공
+                    //usedBookCreateDto.getBook().getLecture().getMajorCreateDto().setName();
+                    // 판매가
+                    usedBookCreateDto.setUsedBookCost(Long.valueOf((String.valueOf(BookPriceInput.getText()))));
+                    // 판메자 메모
+                    // 체크박스(6개)
+
+
+
                     Intent intent = new Intent(getApplicationContext(), BarActivity.class);
                     startActivity(intent);
                 }
