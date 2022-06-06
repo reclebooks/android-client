@@ -7,17 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import android.widget.ImageButton;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.Book.Dto.BookDetailDto;
+import com.example.myapplication.Book.Dto.Book;
 import com.example.myapplication.Book.Dto.BookListElementDto;
 import com.example.myapplication.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FragmentHome extends Fragment
 {
@@ -42,7 +43,7 @@ public class FragmentHome extends Fragment
         recyclerView.setLayoutManager(layoutManager);
         bookAdapter = new BookAdapter();
 
-        bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+     /*   bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("컴퓨터 구조", "생능 출판사","15,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("컴퓨터 구조", "한빛 아카데미","20,000원","2022.03.23"));
@@ -50,7 +51,13 @@ public class FragmentHome extends Fragment
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
         bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+        bookAdapter.addItem(new BookListElementDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));*/
+
+        List<Book> books = new ArrayList<>();
+        for(Book book : books)
+        {
+            this.bookAdapter.addItem(book);
+        }
 
         recyclerView.setAdapter(bookAdapter);
 
@@ -59,10 +66,10 @@ public class FragmentHome extends Fragment
             @Override
             public void onItemClick(BookAdapter.ViewHolder holder, View view, int position)
             {
-                BookListElementDto item = bookAdapter.getItem(position);
-                BookDetailDto bookDetailDto = new BookDetailDto(item.getName(), item.getBook(), item.getMoney(),  item.getDay());
+                Book item = bookAdapter.getItem(position);
+                //Book bookDetailDto = new Book(item.getName(), item.getPublisher(), item.getCost(), item.getPublishedDate());
                 Intent intent = new Intent(getActivity(), PostActivity.class);
-                PostActivity.setData(bookDetailDto);
+                PostActivity.setData(item);
                 startActivity(intent);
             }
         });

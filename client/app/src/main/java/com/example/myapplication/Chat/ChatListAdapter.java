@@ -8,15 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.Book.BookAdapter;
-import com.example.myapplication.Book.OnPersonItemClickListener;
-import com.example.myapplication.Person;
+import com.example.myapplication.Chat.Dto.ChatListDto;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
 
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> implements OnChatItemClickListener{
-    ArrayList<Person> items = new ArrayList<Person>();
+    ArrayList<ChatListDto> items = new ArrayList<ChatListDto>();
     OnChatItemClickListener listener;
 
     // 뷰홀더가 새로 만들어질 때 호출된다.
@@ -35,7 +33,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // 뷰 객체는 기존 것을 그대로 사용하고 데이터만 바꿔준다.
-        Person item = items.get(position);
+        ChatListDto item = items.get(position);
         holder.setItem(item);
     }
 
@@ -48,19 +46,19 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         return items.size();
     }
 
-    public void addItem(Person item) {
+    public void addItem(ChatListDto item) {
         items.add(item);
     }
 
-    public void setItems(ArrayList<Person> items) {
+    public void setItems(ArrayList<ChatListDto> items) {
         this.items = items;
     }
 
-    public Person getItem(int position) {
+    public ChatListDto getItem(int position) {
         return items.get(position);
     }
 
-    public void setItem(int position, Person item) {
+    public void setItem(int position, ChatListDto item) {
         items.set(position, item);
     }
 
@@ -94,7 +92,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         }
 
 
-        public void setItem(Person item) {
+        public void setItem(ChatListDto item) {
             tvPersonText.setText(item.getContext());
             tvPersonName.setText(item.getUserName());
         }

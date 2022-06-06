@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Book.Dto.Book;
+
+import java.util.ArrayList;
+import java.util.List;
+
 // 구매내역
 public class BuylistActivity extends AppCompatActivity
 {
@@ -24,13 +29,13 @@ public class BuylistActivity extends AppCompatActivity
         recyclerView.setLayoutManager(layoutManager1);
         adapter = new BuyAdapter();
 
+        List<Book> books = new ArrayList<>();
+        for(Book book : books)
+        {
+            this.adapter.addItem(book);
+        }
 
-        adapter.addItem(new BuyDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new BuyDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new BuyDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new BuyDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new BuyDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new BuyDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
+
         recyclerView.setAdapter(adapter);
     }
 }

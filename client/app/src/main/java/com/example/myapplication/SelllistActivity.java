@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Book.Dto.Book;
+
+import java.util.ArrayList;
+import java.util.List;
+
 // 판매내역
 public class SelllistActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -22,17 +27,11 @@ public class SelllistActivity extends AppCompatActivity {
         adapter = new SellAdapter();
 
 
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-        adapter.addItem(new SellDto("역사와 비판적 사고", "한빛 아카데미","20,000원","2022.03.23"));
-
-
+        List<Book> books = new ArrayList<>();
+        for(Book book : books)
+        {
+            this.adapter.addItem(book);
+        }
 
         recyclerView.setAdapter(adapter);
     }

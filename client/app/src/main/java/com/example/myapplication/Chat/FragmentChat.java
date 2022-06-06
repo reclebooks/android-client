@@ -12,12 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.Book.OnPersonItemClickListener;
-import com.example.myapplication.Book.PostActivity;
-import com.example.myapplication.Chat.ChatActivity;
-import com.example.myapplication.Chat.ChatListAdapter;
-import com.example.myapplication.Chat.OnChatItemClickListener;
-import com.example.myapplication.Person;
+import com.example.myapplication.Chat.Dto.ChatListDto;
 import com.example.myapplication.R;
 
 public class FragmentChat extends Fragment {
@@ -35,13 +30,13 @@ public class FragmentChat extends Fragment {
         adapter = new ChatListAdapter();
 
         // 마지막 멘트, 상대방 이름
-        adapter.addItem(new Person("전화주세요", "이름1"));
-        adapter.addItem(new Person("팔렸나요?", "이름2"));
-        adapter.addItem(new Person("중문에서 만나요", "이름3"));
-        adapter.addItem(new Person("얼마에요?", "이름4"));
-        adapter.addItem(new Person("안녕하세요", "이름5"));
-        adapter.addItem(new Person("책 상태가 어떻게 될까요", "이름6"));
-        adapter.addItem(new Person("사진좀 보내주세요", "이름7"));
+        adapter.addItem(new ChatListDto("전화주세요", "이름1"));
+        adapter.addItem(new ChatListDto("팔렸나요?", "이름2"));
+        adapter.addItem(new ChatListDto("중문에서 만나요", "이름3"));
+        adapter.addItem(new ChatListDto("얼마에요?", "이름4"));
+        adapter.addItem(new ChatListDto("안녕하세요", "이름5"));
+        adapter.addItem(new ChatListDto("책 상태가 어떻게 될까요", "이름6"));
+        adapter.addItem(new ChatListDto("사진좀 보내주세요", "이름7"));
 
         adapter.setOnChatItemClickListener(new OnChatItemClickListener()
         {

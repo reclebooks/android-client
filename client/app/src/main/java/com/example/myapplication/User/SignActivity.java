@@ -10,10 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.myapplication.Book.Dto.BookCreateDto;
 import com.example.myapplication.R;
-import com.example.myapplication.User.Dto.UserSignupDto;
-import com.example.myapplication.User.LoginActivity;
+import com.example.myapplication.User.Dto.UserCreateDto;
 
 public class SignActivity extends AppCompatActivity {
     EditText inputBunho;
@@ -22,13 +20,14 @@ public class SignActivity extends AppCompatActivity {
     Button certiButton;
     Button btnBunho;
     EditText inputcertnum;
+    public static String phone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
-
-        UserSignupDto userSignupDto = new UserSignupDto();
+        UserCreateDto userSignupDto = new UserCreateDto();
         btnBunho=(Button) findViewById(R.id.btnBunho);
         inputcertnum=(EditText)findViewById(R.id.inputcertnum);
 
@@ -63,8 +62,8 @@ public class SignActivity extends AppCompatActivity {
                 String email = inputBunho.getText().toString().trim();
                 if(email.matches(phoneValidation) && s.length()>0){
                     btnBunho.setEnabled(true);
-                    // 인증번호 발송 버튼이 활성화 되었을 때 dto에 값 세팅
-                    userSignupDto.setPhone(String.valueOf(inputBunho.getText()));
+                    SignActivity.phone = String.valueOf(inputBunho.getText());
+                    System.out.println(SignActivity.phone);
                 } else {
                     btnBunho.setEnabled(false);
                 }
