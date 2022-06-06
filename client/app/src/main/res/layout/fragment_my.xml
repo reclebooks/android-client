@@ -62,7 +62,7 @@
             android:layout_marginStart="44dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/nanumbarungothicbold"
-            android:text="아이디"
+            android:text="학교"
             android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintStart_toEndOf="@+id/UserImageView"
@@ -96,7 +96,7 @@
             android:layout_height="19dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="28dp"
-            android:text="aaaaa1234"
+            android:text="충북대학교"
             android:textSize="16dp"
             app:layout_constraintStart_toEndOf="@+id/IdView"
             app:layout_constraintTop_toBottomOf="@+id/BuyListBookName" />
