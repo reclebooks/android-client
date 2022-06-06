@@ -83,10 +83,10 @@ public class WritingActivity extends AppCompatActivity
         setContentView(R.layout.writing);
         BookCreateDto bookCreateDto = new BookCreateDto();
         WriteButton= (Button) findViewById(R.id.WriteButton); // 작성하기 버튼
-        BookPriceMemo= (EditText) findViewById(R.id.BookPriceMemo); // 가격
+        BookPriceMemo= (EditText) findViewById(R.id.BookPublishingDateMemo); // 가격
         BookTitleMemo= (EditText) findViewById(R.id.BookTitleMemo); // 책제목
         BookAuthorMemo= (EditText) findViewById(R.id.BookAuthorMemo); // 저자
-        BookPublishingDateMemo=(EditText) findViewById(R.id.BookPublishingDateMemo); // 출판년도
+        BookPublishingDateMemo=(EditText) findViewById(R.id.BookPublisherMemo); // 출판년도
         ProfessorMemo=(EditText) findViewById(R.id.ProfessorMemo); // 교수
         CourseMemo=(EditText) findViewById(R.id.CourseMemo); // 수업명
         BookStateMemo=(EditText) findViewById(R.id.BookStateMemo); // 책 상태

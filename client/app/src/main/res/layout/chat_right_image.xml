@@ -28,7 +28,7 @@
         android:layout_marginBottom="4dp"
         android:text="00:00"
         android:textColor="#b9bcce"
-        android:textSize="10sp"
+        android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/image_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@
         android:paddingBottom="4dp"
         android:text="내가 보낸 메세지"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
         android:layout_marginRight="8dp"
         android:text="00:00"
         android:textColor="#b9bcce"
-        android:textSize="10sp"
+        android:textSize="10dp"
         app:layout_constraintEnd_toStartOf="@+id/msg_text"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
