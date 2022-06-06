@@ -15,19 +15,98 @@
         tools:context=".MainActivity">
 
 
+        <EditText
+            android:id="@+id/SchoolNameMemo"
+            android:layout_width="280dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/box_border"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+        <EditText
+            android:id="@+id/SchoolCollegeMemo"
+            android:layout_width="280dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/box_border"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SchoolNameMemo" />
+
+        <EditText
+            android:id="@+id/SchoolMajorMemo"
+            android:layout_width="280dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/box_border"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SchoolCollegeMemo" />
+
+        <TextView
+            android:id="@+id/SchoolNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="학교"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/CollegeNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:text="단과대"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SchoolNameText" />
+
+        <TextView
+            android:id="@+id/MajorNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="23dp"
+            android:text="전공"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CollegeNameText" />
+
+        <EditText
+            android:id="@+id/BookPublishingDateMemo"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/box_border"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookPublisherMemo" />
 
         <EditText
             android:id="@+id/BookPriceMemo"
             android:layout_width="280dp"
             android:layout_height="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="26dp"
-            android:layout_marginBottom="35dp"
             android:background="@drawable/box_border"
             android:inputType="number"
             android:textSize="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookPublishingDateMemo" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -91,7 +170,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="출판년도"
+            android:text="출판사"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BookAuthorText" />
@@ -101,8 +180,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="19dp"
             android:text="가격"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookPriceText" />
+
+        <TextView
+            android:id="@+id/bookPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="23dp"
+            android:text="날짜"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BookPublishingDateText" />
@@ -123,7 +213,7 @@
             android:id="@+id/BookAuthorMemo"
             android:layout_width="280dp"
             android:layout_height="0dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="26dp"
             android:background="@drawable/box_border"
             android:inputType="textLongMessage"
@@ -132,7 +222,7 @@
             app:layout_constraintTop_toBottomOf="@+id/BookTitleMemo" />
 
         <EditText
-            android:id="@+id/BookPublishingDateMemo"
+            android:id="@+id/BookPublisherMemo"
             android:layout_width="280dp"
             android:layout_height="20dp"
             android:layout_marginTop="16dp"
@@ -148,12 +238,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="34dp"
             android:text="어떤 수업에서 사용하는 책인가요?"
             android:textColor="@color/strong"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/BookPriceText" />
+            app:layout_constraintTop_toBottomOf="@+id/SchoolMajorMemo" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="학교와 전공을 적어주세요."
+            android:textColor="@color/strong"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookPriceMemo" />
 
         <TextView
             android:id="@+id/ProfessorText"
@@ -237,16 +339,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BookStateMemo" />
 
+
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="26dp"
             android:text="필기 흔적을 사진으로 남겨주세요."
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/PenUnderlineCheck" />
 
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:text="각 항목에 체크해 주세요."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <ImageView
             android:id="@+id/BookStateImage2"
@@ -321,6 +433,72 @@
             android:text="판매 가격"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/UnderlineCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="밑줄 연필/샤프"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <CheckBox
+            android:id="@+id/PenUnderlineCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="밑줄 볼펜/형광펜"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UnderlineCheck" />
+
+        <CheckBox
+            android:id="@+id/NoteCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:text="필기 연필/샤프"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/UnderlineCheck"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <CheckBox
+            android:id="@+id/PenNoteCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="22dp"
+            android:text="필기 볼펜/형광펜"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/PenUnderlineCheck"
+            app:layout_constraintTop_toBottomOf="@+id/NoteCheck" />
+
+        <CheckBox
+            android:id="@+id/PageStatusCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="22dp"
+            android:text="페이지 손상"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/PenNoteCheck"
+            app:layout_constraintTop_toBottomOf="@+id/BookCoverStatusCheck" />
+
+        <CheckBox
+            android:id="@+id/BookCoverStatusCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="12dp"
+            android:text="겉표지"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/NoteCheck"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

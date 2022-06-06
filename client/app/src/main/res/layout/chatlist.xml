@@ -24,7 +24,7 @@
             android:fontFamily="@font/nanumbarungothicbold"
             android:text="대화 상대"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
